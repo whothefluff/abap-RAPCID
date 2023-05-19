@@ -52,7 +52,7 @@ class zcl_rap_cid implementation.
 
     try.
 
-      r_unique_cid = new #( conv #( cl_system_uuid=>create_uuid_x16_static( ) ) ).
+      r_unique_cid = new #( conv #( cl_system_uuid=>if_system_uuid_rfc4122_static~create_uuid_x16_by_version( 4 ) ) ).
 
     catch cx_uuid_error.
 
